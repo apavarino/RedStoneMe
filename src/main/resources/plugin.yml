@@ -1,0 +1,57 @@
+name: RedStoneMe
+main: me.crylonz.RedStoneMe
+version: 2.3
+author: Crylonz
+softdepend: [Multiverse-Core]
+description: RedStone enable when your a near
+api-version: 1.13
+commands:
+  redstoneme:
+    description: all commands of redstoneme
+    usage: /redstoneme new|add|help|remove|destroy|state|radius|public
+  rsm:
+    description: Register a block to redstone it
+    usage: /rsm new|add|help|remove|destroy|state|radius|public
+permissions:
+  redstoneme.*:
+    description: Gives access to all redstoneme commands
+    children:
+      redstoneme.new: true
+      redstoneme.destroy: true
+      redstoneme.add: true
+      redstoneme.remove: true
+      redstoneme.help: true
+      redstoneme.list: true
+      redstoneme.radius: true
+      redstoneme.state: true
+      redstoneme.public: true
+  redstoneme.new:
+    description: Allows player to generate a new trigger
+    default: op
+  redstoneme.destroy:
+    description: Allows player to destroy a existing trigger
+    default: op
+  redstoneme.list:
+    description: Allows player to see list of trigger and player per trigger
+    default: op
+  redstoneme.add:
+    description: Allows player to add a player to a trigger
+    default: op
+  redstoneme.remove:
+    description: Allows player to remove a player to a trigger
+    default: op
+  redstoneme.help:
+    description: Allows player to see help
+    default: op
+  redstoneme.radius:
+    description: Allows player to edit the radius of a trigger
+    default: op
+  redstoneme.state:
+    description: Allows player to edit the state of a trigger
+    default: op
+  redstoneme.public:
+    description: Allows player to make a trigger public
+    default: op
+  redstoneme.admin:
+    description: Allows player to access to all trigger
+    default: op
