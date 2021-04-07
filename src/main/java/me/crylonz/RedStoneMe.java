@@ -105,12 +105,5 @@ public class RedStoneMe extends JavaPlugin implements Listener {
     public static boolean isOwnerOfTrigger(Player p, RedStoneTrigger rt) {
         return rt.getOwner().equalsIgnoreCase(p.getUniqueId().toString());
     }
-
-
-    public boolean onCommand(CommandSender sender, Command cmd, String CommandLabel, String[] args) {
-
-
-        return true;
-    }
 }
 

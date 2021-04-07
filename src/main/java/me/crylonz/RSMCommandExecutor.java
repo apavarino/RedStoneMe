@@ -202,6 +202,7 @@ public class RSMCommandExecutor implements CommandExecutor {
                                         {
                                             foundRt = true;
                                             rt.setEnable(args[2].equalsIgnoreCase("on"));
+                                            this.plugin.saveConfig();
                                         }
                                         else {
                                             player.sendMessage(ChatColor.GOLD + "[RedStoneMe] " + ChatColor.RED +"Only the owner can access to this trigger");
@@ -235,7 +236,8 @@ public class RSMCommandExecutor implements CommandExecutor {
                                         if(isOwnerOfTrigger(player,rt) || player.hasPermission("redstoneme.admin"))
                                         {
                                             foundRt = true;
-                                            rt.setEnable(args[2].equalsIgnoreCase("on"));
+                                            rt.setPublic(args[2].equalsIgnoreCase("on"));
+                                            this.plugin.saveConfig();
                                         }
                                         else {
                                             player.sendMessage(ChatColor.GOLD + "[RedStoneMe] " + ChatColor.RED +"Only the owner can access to this trigger");

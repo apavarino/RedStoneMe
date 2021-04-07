@@ -1,6 +1,6 @@
 name: RedStoneMe
 main: me.crylonz.RedStoneMe
-version: 2.3
+version: 2.3.1
 author: Crylonz
 softdepend: [Multiverse-Core]
 description: RedStone enable when your a near

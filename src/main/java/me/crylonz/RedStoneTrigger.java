@@ -139,6 +139,10 @@ public class RedStoneTrigger implements ConfigurationSerializable {
         return isPublic;
     }
 
+    public void setPublic(boolean aPublic) {
+        isPublic = aPublic;
+    }
+
     @Override
     public Map<String, Object> serialize() {
         Map<String, Object> map = new HashMap<>();
