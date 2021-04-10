@@ -11,6 +11,7 @@
 ## Description
 Activate redstone just with your presence !
 
+Java Edition required. RedstoneMe is mainly compatible with Bukkit, Spigot and Paper.
 
 ## Project page
 + https://dev.bukkit.org/projects/redstoneme
