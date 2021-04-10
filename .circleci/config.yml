@@ -1,0 +1,22 @@
+version: 2.1
+jobs:
+  build:
+    working_directory: ~/redstoneme
+    docker:
+      - image: circleci/openjdk:8-jdk-stretch
+    steps:
+      - checkout
+      - restore_cache:
+          key: redstoneme-{{ checksum "pom.xml" }}
+
+      - run: mvn dependency:go-offline
+
+      - save_cache:
+          paths:
+            - ~/.m2
+          key: redstoneme-{{ checksum "pom.xml" }}
+
+      - run: mvn install
+
+      - store_artifacts:
+          path: /home/circleci/redstoneme/target/RedstoneMe-SNAPSHOT.jar
